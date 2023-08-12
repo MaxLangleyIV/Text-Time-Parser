@@ -13,17 +13,15 @@ def print_durations(times, audio_duration):
 
     i = 0
     for item in times:
-        # If first timestamp, calculate duration using the next timestamp
 
         item = tuple(item.split(":"))
-        item2 = None
 
         # Try to get next item in list
         try:
             item2 = tuple(times[i + 1].split(":"))
 
         except IndexError:
-
+            # Final timestamp, so calculate final duration using total audio duration instead of next timestamp.
             duration = ((audio_duration[0] * 60) + audio_duration[1]) - ((int(item[0]) * 60) + int(item[1]))
             print("Photo: %2i  |Seconds: %5i  |Start Time: %s\n" % (photo_id, duration, str(item[0] + ":" + item[1])))
             return
