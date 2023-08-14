@@ -3,7 +3,6 @@ import TimestampParser
 # Timestamp Parser is best used by executing TimestampParser.py in the Windows Command Promp
 # (or the terminal of your choice). The following is only for demonstration.
 
-
 # Open example text file.
 test_text = open("ExampleText.txt", "r")
 

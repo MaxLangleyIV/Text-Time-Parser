@@ -1,12 +1,22 @@
-'''
+"""
 Max Langley IV
-LLLP Photo Duration Calculator
-'''
-
+Timestamp Parser and Duration Calculator
+"""
+import argparse
 import re
 
 
 def print_durations(times, audio_duration):
+    """
+    Calculate and print the durations for each timestamp.
+
+    Args:
+        times (list): A list of timestamp strings in the format 'minutes:seconds'.
+        audio_duration (tuple): A tuple representing the audio duration in minutes and seconds.
+
+    Returns:
+        None
+    """
     photo_id = 1
     duration = 0
     previous_duration = 0
@@ -37,8 +47,17 @@ def print_durations(times, audio_duration):
     return
 
 
-# Searches a file for all occurrences of timestamps.
 def get_times(file):
+    """
+    Extract and return a list of timestamp strings from the given file.
+
+    Args:
+        file (file): An open file object.
+
+    Returns:
+        list: A list of timestamp strings.
+    """
+
     regex = r'\b\d+:\d{2}\b'
     line_list = []
 
@@ -54,12 +73,26 @@ def get_times(file):
 
 
 def ensure_txt_extension(filename):
+    """
+    Ensure that the provided filename has a .txt extension.
+
+    Args:
+        filename (str): The input filename.
+
+    Returns:
+        str: The modified filename with .txt extension.
+    """
+
     if not filename.endswith(".txt"):
         filename += ".txt"
     return filename
 
 
 def main():
+    """
+    Main entry point of the script.
+    """
+
     print("Welcome to the Timestamp Parser!")
 
     file_found = False
