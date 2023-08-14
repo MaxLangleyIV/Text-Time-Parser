@@ -1,46 +1,53 @@
 # Timestamp Parser
 
-The Timestamp Parser is a Python script that allows you to extract durations from a text file containing timestamps. It's particularly useful for tasks like podcast editing, where you want to associate specific images with their starting timestamps.
+A Python script that extracts and presents a list durations from a text file containing timestamps. 
 
-## Table of Contents
-- [Description](#description)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Files](#files)
-- [Contributing](#contributing)
-- [License](#license)
+## The Problem:
 
-## Description
+When editing video content the producer may provide a list of timestamps and their corresponding visual elements. 
+Some editing software requires element durations to be input as seconds.
+This necesitates the repetitive calculation of durations by the editor.
 
-The Timestamp Parser is a utility designed to work with timestamped text files, commonly used in podcast editing or other media production workflows. It extracts the timestamps and calculates the duration between each entry to provide an overview of each segment's length.
+## The Solution:
+
+This script automates the task of finding the timestamps and performing the necessary calculations.
+The results are then displayed in the terminal window as a formatted list.
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository, or download the zip file and extract it to the location of your choice.
 
-   ```bash
-   git clone https://github.com/MaxLangleyIV/TimestampParser.git
+2. Ensure you have the latest Python installed on your system.
+   ```
+   https://www.python.org/downloads/
+   ```
+3. Place the text containing timestamps into a .txt file.
+   For instance: If you receive an email containing the timestamps, copy and paste the message into a text file.
 
-2. Ensure you have Python installed on your system.
+5. Determine the total duration of the project which the timestamps pertain to.
+   For instance: If the timestamps are taken from an audio file, then find the duration of said file.
 
-3. Open a terminal and navigate to the project directory: "cd ...\TimestampParser"
+## Usage
 
-##Usage
 Place your timestamped text file (e.g., ExampleText.txt) in the same directory as TimestampParser.py.
 
-Open a terminal and run the script:
+1. Open a terminal and navigate to the project directory: 
+ 
+2. Run the parser with the command:
+   ```
+   python TimestampParser.py
+   ```
 
-python TimestampParser.py
-Follow the prompts:
-
-Enter the name of the text file to scan.
-Enter the duration of the audio file in the format minutes:seconds.
+3. Enter the name of the text file to scan and the duration of the associated file in the format of *minutes:seconds*.
 
 The script will process the provided text file and display the durations associated with each timestamp.
 
-##Files
-TimestampParser.py: Contains the core functions for parsing timestamps and calculating durations.
+## Files
+**TimestampParser.py:** Contains the core functions for parsing timestamps and calculating durations.
 
-ParserUseExample.py: Provides an example of how to use the Timestamp Parser with your own input.
+**ParserUseExample.py:** Provides an example of how to use the Timestamp Parser with your own input.
 
-ExampleText.txt: A sample text file with timestamps for demonstration purposes.
+**ExampleText.txt:** A sample text file with timestamps for demonstration purposes.
+
+## Contributing
+Contributions to the Timestamp Parser project are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
