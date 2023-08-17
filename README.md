@@ -4,7 +4,7 @@ A Python script that extracts and presents a list durations from a text file con
 
 ## The Problem:
 
-When editing video content the producer may provide a list of timestamps and their corresponding visual elements. 
+When editing video content you may recieve a list of timestamps and their corresponding visual elements. 
 Some editing software requires element durations to be input as seconds.
 This necessitates the repetitive calculation of durations by the editor.
 
